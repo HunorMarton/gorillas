@@ -1,6 +1,6 @@
 # JavaScript Game Tutorial: Gorillas
 
-[![YouTube Tutorial: Gorillas](<./screenshot - light.png>)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 Welcome to the source code repository for the [Gorillas JavaScript Game Tutorial](). You can find the entire tutorial on [YouTube]().
 
@@ -94,4 +94,4 @@ Follow me on [X](https://twitter.com/HunorBorbely)
 
 [Buy Me a Coffee](www.buymeacoffee.com/hunor)
 
-[![YouTube Tutorial: Gorillas](<./screenshot - dark.png>)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![YouTube Tutorial: Gorillas](<./Screenshot - dark.png>)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
