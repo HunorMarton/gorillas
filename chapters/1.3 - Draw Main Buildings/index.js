@@ -3,10 +3,6 @@ let state = {};
 
 // ...
 
-// Configuration
-const numberOfBuildings = 8;
-// ...
-
 // The main canvas element and its drawing context
 const canvas = document.getElementById("game");
 canvas.width = window.innerWidth;
@@ -38,12 +34,12 @@ function newGame() {
   };
 
   // Generate background buildings
-  for (let i = 0; i < numberOfBuildings + 3; i++) {
+  for (let i = 0; i < 11; i++) {
     generateBackgroundBuilding(i);
   }
 
   // Generate buildings
-  for (let i = 0; i < numberOfBuildings; i++) {
+  for (let i = 0; i < 8; i++) {
     generateBuilding(i);
   }
 
@@ -85,7 +81,8 @@ function generateBuilding(index) {
   const maxWidth = 130;
   const width = minWidth + Math.random() * (maxWidth - minWidth);
 
-  const platformWithGorilla = index === 1 || index === numberOfBuildings - 2;
+  const platformWithGorilla =
+    index === 1 || index === state.buildings.length - 2;
 
   const minHeight = 40;
   const maxHeight = 300;

@@ -3,10 +3,6 @@ let state = {};
 
 // ...
 
-// Configuration
-const numberOfBuildings = 8;
-// ...
-
 // The main canvas element and its drawing context
 const canvas = document.getElementById("game");
 canvas.width = window.innerWidth;

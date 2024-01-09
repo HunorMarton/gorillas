@@ -9,10 +9,6 @@ let previousAnimationTimestamp = undefined;
 
 // ...
 
-// Configuration
-const numberOfBuildings = 8;
-// ...
-
 // The main canvas element and its drawing context
 const canvas = document.getElementById("game");
 canvas.width = window.innerWidth;
@@ -55,12 +51,12 @@ function newGame() {
   };
 
   // Generate background buildings
-  for (let i = 0; i < numberOfBuildings + 3; i++) {
+  for (let i = 0; i < 11; i++) {
     generateBackgroundBuilding(i);
   }
 
   // Generate buildings
-  for (let i = 0; i < numberOfBuildings; i++) {
+  for (let i = 0; i < 8; i++) {
     generateBuilding(i);
   }
 
@@ -101,7 +97,8 @@ function generateBuilding(index) {
   const maxWidth = 130;
   const width = minWidth + Math.random() * (maxWidth - minWidth);
 
-  const platformWithGorilla = index === 1 || index === numberOfBuildings - 2;
+  const platformWithGorilla =
+    index === 1 || index === state.buildings.length - 2;
 
   const minHeight = 40;
   const maxHeight = 300;
@@ -123,9 +120,8 @@ function generateBuilding(index) {
 }
 
 function calculateScale() {
-  const totalWidthOfTheCity =
-    state.buildings[numberOfBuildings - 1].x +
-    state.buildings[numberOfBuildings - 1].width;
+  const lastBuilding = state.buildings.at(-1);
+  const totalWidthOfTheCity = lastBuilding.x + lastBuilding.width;
 
   state.scale = window.innerWidth / totalWidthOfTheCity;
 }
@@ -141,8 +137,8 @@ window.addEventListener("resize", () => {
 function initializeBombPosition() {
   const building =
     state.currentPlayer === 1
-      ? state.buildings[1] // Second building
-      : state.buildings[numberOfBuildings - 2]; // Second last building
+      ? state.buildings.at(1) // Second building
+      : state.buildings.at(-2); // Second last building
 
   const gorillaX = building.x + building.width / 2;
   const gorillaY = building.height;
@@ -261,8 +257,8 @@ function drawGorilla(player) {
 
   const building =
     player === 1
-      ? state.buildings[1] // Second building
-      : state.buildings[numberOfBuildings - 2]; // Second last building
+      ? state.buildings.at(1) // Second building
+      : state.buildings.at(-2); // Second last building
 
   ctx.translate(building.x + building.width / 2, building.height);
 
@@ -545,7 +541,7 @@ function checkFrameHit() {
 }
 
 function checkBuildingHit() {
-  for (let i = 0; i < numberOfBuildings; i++) {
+  for (let i = 0; i < 8; i++) {
     const building = state.buildings[i];
     if (
       state.bomb.x + 4 > building.x &&

@@ -3,10 +3,6 @@ let state = {};
 
 // ...
 
-// Configuration
-const numberOfBuildings = 8;
-// ...
-
 // The main canvas element and its drawing context
 const canvas = document.getElementById("game");
 canvas.width = window.innerWidth;
@@ -38,12 +34,12 @@ function newGame() {
   };
 
   // Generate background buildings
-  for (let i = 0; i < numberOfBuildings + 3; i++) {
+  for (let i = 0; i < 11; i++) {
     generateBackgroundBuilding(i);
   }
 
   // Generate buildings
-  for (let i = 0; i < numberOfBuildings; i++) {
+  for (let i = 0; i < 8; i++) {
     generateBuilding(i);
   }
 
