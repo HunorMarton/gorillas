@@ -679,7 +679,7 @@ function checkFrameHit() {
 }
 
 function checkBuildingHit() {
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < state.buildings.length; i++) {
     const building = state.buildings[i];
     if (
       state.bomb.x + 4 > building.x &&
