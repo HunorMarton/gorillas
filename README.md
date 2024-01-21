@@ -1,90 +1,106 @@
 # JavaScript Game Tutorial: Gorillas
 
-[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](TODO)
 
-Welcome to the source code repository for the [Gorillas JavaScript Game Tutorial](). You can find the entire tutorial on [YouTube]().
+Welcome to the source code repository for the Gorillas JavaScript Game Tutorial. There are multiple versions of this tutorial.
 
-You can also play the final, extended version of the game on [CodePen]().
+- The simplified version you can find on [freeCodeCamp](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/). This is a comprehensive guide, yet it lacks several main features of the final game and the graphics is more stripped down.
 
-## Chapters
+- The full tutorial you can find on [YouTube](TODO). This includes many more chapters, like how to make the buildings destructible, how to animate the hand of the gorilla to follow the drag movement while aiming, and we add AI logic, so you can play against the computer.
 
-In this repository you can find the source code for each major step of the [tutorial]().
+- You can also play the final, extended version of the game on [CodePen](TODO). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
+
+## Source Code for the freeCodeCamp Article
+
+[![freeCodeCamp Tutorial: Gorillas](<./Screenshot - freeCodeCamp.png>)](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/)
+
+If you follow along the [freeCodeCamp article](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/) you should end up with the following source code.
+
+- [Source Code for the freeCodeCamp article](<./source-code-for-the-freeCodeCamp-article>)
+
+## Source Code for the YouTube Tutorial
+
+[![YouTube Tutorial: Gorillas](<./Screenshot - YouTube.png>)](TODO)
+
+If you follow along the [YouTube tutorial](TODO), here you can find the source code for each major step.
 
 ### Initial Setup
 
-- [0.0 - Initial Setup](<./chapters/0.0 - initial>)
+- [0.0 - Initial Setup](<./source-code-for-the-youtube-tutorial/0.0 - initial>)
 
-- [0.1 - Initializing State](<./chapters/0.1 - Initializing State>)
+- [0.1 - Initializing State](<./source-code-for-the-youtube-tutorial/0.1 - Initializing State>)
 
 ### Drawing with HTML Canvas
 
-- [1.0 - Adjusting the Coordinate System](<./chapters/1.0 - Drawing>)
+- [1.0 - Adjusting the Coordinate System](<./source-code-for-the-youtube-tutorial/1.0 - Drawing>)
 
-- [1.1 - Draw Background Sky](<./chapters/1.1 - Draw Background Sky>)
+- [1.1 - Draw Background Sky](<./source-code-for-the-youtube-tutorial/1.1 - Draw Background Sky>)
 
-- [1.2 - Draw Background Buildings](<./chapters/1.2 - Draw Background Buildings>)
+- [1.2 - Draw Background Buildings](<./source-code-for-the-youtube-tutorial/1.2 - Draw Background Buildings>)
 
-- [1.3 - Draw Main Buildings](<./chapters/1.3 - Draw Main Buildings>)
+- [1.3 - Draw Main Buildings](<./source-code-for-the-youtube-tutorial/1.3 - Draw Main Buildings>)
 
-- [1.4 - Draw Gorilla](<./chapters/1.4 - Draw Gorilla>)
+- [1.4 - Draw Gorilla](<./source-code-for-the-youtube-tutorial/1.4 - Draw Gorilla>)
 
-- [1.5 - Draw the Body of the Gorillas](<./chapters/1.5 - Draw the Body of the Gorillas>)
+- [1.5 - Draw the Body of the Gorillas](<./source-code-for-the-youtube-tutorial/1.5 - Draw the Body of the Gorillas>)
 
-- [1.6 - Draw the Arms of the Gorillas](<./chapters/1.6 - Draw the Arms of the Gorillas>)
+- [1.6 - Draw the Arms of the Gorillas](<./source-code-for-the-youtube-tutorial/1.6 - Draw the Arms of the Gorillas>)
 
-- [1.7 - Draw the Face of the Gorilla](<./chapters/1.7 - Draw the Face of the Gorilla>)
+- [1.7 - Draw the Face of the Gorilla](<./source-code-for-the-youtube-tutorial/1.7 - Draw the Face of the Gorilla>)
 
-- [1.8 - Draw a Simple Bomb](<./chapters/1.8 - Draw a Simple Bomb>)
+- [1.8 - Draw a Simple Bomb](<./source-code-for-the-youtube-tutorial/1.8 - Draw a Simple Bomb>)
 
-- [1.9 - Scaling](<./chapters/1.9 - Scaling>)
+- [1.9 - Scaling](<./source-code-for-the-youtube-tutorial/1.9 - Scaling>)
 
 ### Aiming
 
-- [2.1 - Info Panels for Angle and Velocity](<./chapters/2.1 - Info Panels for Angle and Velocity>)
+- [2.1 - Info Panels for Angle and Velocity](<./source-code-for-the-youtube-tutorial/2.1 - Info Panels for Angle and Velocity>)
 
-- [2.2 - Bomb Grab Area](<./chapters/2.2 - Bomb Grab Area>)
+- [2.2 - Bomb Grab Area](<./source-code-for-the-youtube-tutorial/2.2 - Bomb Grab Area>)
 
-- [2.3 - Event Handling](<./chapters/2.3 - Event Handling>)
+- [2.3 - Event Handling](<./source-code-for-the-youtube-tutorial/2.3 - Event Handling>)
 
-- [2.4 - Follow the Drag Movement with the Hand of the Gorilla](<./chapters/2.4 - Follow the Drag Movement with the Hand of the Gorilla>)
+- [2.4 - Follow the Drag Movement with the Hand of the Gorilla](<./source-code-for-the-youtube-tutorial/2.4 - Follow the Drag Movement with the Hand of the Gorilla>)
 
-- [2.5 - Draw the Throw Trajectory](<./chapters/2.5 - Draw the Throw Trajectory>)
+- [2.5 - Draw the Throw Trajectory](<./source-code-for-the-youtube-tutorial/2.5 - Draw the Throw Trajectory>)
 
 ### Animation and Hit Detection
 
-- [3.0 - Animation Loop and Moving the Bomb](<./chapters/3.0 - Animation Loop and Moving the Bomb>)
+- [3.0 - Animation Loop and Moving the Bomb](<./source-code-for-the-youtube-tutorial/3.0 - Animation Loop and Moving the Bomb>)
 
-- [3.1 - Detecting if the Bomb got off-screen and Switching Players](<./chapters/3.1 - Detecting if the Bomb got off-screen and Switching Players>)
+- [3.1 - Detecting if the Bomb got off-screen and Switching Players](<./source-code-for-the-youtube-tutorial/3.1 - Detecting if the Bomb got off-screen and Switching Players>)
 
-- [3.2 - Draw the Bomb as a Spinning Banana](<./chapters/3.2 - Draw the Bomb as a Spinning Banana>)
+- [3.2 - Draw the Bomb as a Spinning Banana](<./source-code-for-the-youtube-tutorial/3.2 - Draw the Bomb as a Spinning Banana>)
 
-- [3.3 - Simple Hit Detection of the Buildings](<./chapters/3.3 - Simple Hit Detection of the Buildings>)
+- [3.3 - Simple Hit Detection of the Buildings](<./source-code-for-the-youtube-tutorial/3.3 - Simple Hit Detection of the Buildings>)
 
-- [3.4 - Draw Buildings with Blast Holes](<./chapters/3.4 - Draw Buildings with Blast Holes>)
+- [3.4 - Draw Buildings with Blast Holes](<./source-code-for-the-youtube-tutorial/3.4 - Draw Buildings with Blast Holes>)
 
-- [3.5 - Improve Hit Detection Precision](<./chapters/3.5 - Improve Hit Detection Precision>)
+- [3.5 - Improve Hit Detection Precision](<./source-code-for-the-youtube-tutorial/3.5 - Improve Hit Detection Precision>)
 
-- [3.6 - Improved Hit Detection for Buildings](<./chapters/3.6 - Improved Hit Detection for Buildings>)
+- [3.6 - Improved Hit Detection for Buildings](<./source-code-for-the-youtube-tutorial/3.6 - Improved Hit Detection for Buildings>)
 
-- [3.7 - Gorilla Hit Detection](<./chapters/3.7 - Gorilla Hit Detection>)
+- [3.7 - Gorilla Hit Detection](<./source-code-for-the-youtube-tutorial/3.7 - Gorilla Hit Detection>)
 
 ### Endgame
 
-- [4.0 - Announcing the Winner and Starting a New Game](<./chapters/4.0 - Announcing the Winner and New Game>)
+- [4.0 - Announcing the Winner and Starting a New Game](<./source-code-for-the-youtube-tutorial/4.0 - Announcing the Winner and New Game>)
 
 ### AI Logic
 
 You can find a play the final, single player version of the game on [Vercel](https://gorillas-vcrd.vercel.app/).
 
-- [5.0 - AI Logic](<./chapters/5.0 - AI Logic>)
+- [5.0 - AI Logic](<./source-code-for-the-youtube-tutorial/5.0 - AI Logic>)
 
-- [5.1 - Draw a Thinking Gorilla](<./chapters/5.1 - Draw a Thinking Gorilla>)
+- [5.1 - Draw a Thinking Gorilla](<./source-code-for-the-youtube-tutorial/5.1 - Draw a Thinking Gorilla>)
 
-### Final extended version
+## Final extended version
 
-You can find a play the final, extended version on [CodePen]() and on [Vercel](https://gorillas-phi.vercel.app/).
+[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](TODO)
 
-- [Final, extended version](https://github.com/HunorMarton/gorillas)
+You can find a play the final, extended version on [CodePen](TODO) and on [Vercel](https://gorillas-phi.vercel.app/).
+
+- [Source code of the final, extended version](https://github.com/HunorMarton/gorillas)
 
 ## About
 
