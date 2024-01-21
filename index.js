@@ -200,7 +200,7 @@ function generateBuilding(index) {
   const width = minWidth + Math.random() * (maxWidth - minWidth);
 
   const platformWithGorilla = index === 1 || index === 6;
-  const platformWithWindmill = index === state.buildings.length - 1;
+  const platformWithWindmill = index === 7;
   const smallerBuilding = platformWithGorilla || platformWithWindmill;
 
   const minHeight = 40;
