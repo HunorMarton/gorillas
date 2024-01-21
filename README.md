@@ -14,7 +14,7 @@ Welcome to the source code repository for the Gorillas JavaScript Game Tutorial.
 
 [![freeCodeCamp Tutorial: Gorillas](<./Screenshot - freeCodeCamp.png>)](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/)
 
-If you follow along the [freeCodeCamp article](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/) you should end up with the following source code.
+You can find the simplified version of this tutorial on [freeCodeCamp](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/). You can find the end result of this article as a playable game on [Vercel](https://gorillas-freecodecamp.vercel.app/). If you follow along you should end up with the following source code:
 
 - [Source Code for the freeCodeCamp article](<./source-code-for-the-freeCodeCamp-article>)
 
@@ -22,7 +22,7 @@ If you follow along the [freeCodeCamp article](https://www.freecodecamp.org/news
 
 [![YouTube Tutorial: Gorillas](<./Screenshot - YouTube.png>)](TODO)
 
-If you follow along the [YouTube tutorial](TODO), here you can find the source code for each major step.
+You can find the full version of the tutorial on [YouTube](TODO). You can play the final, single player version of the game on [Vercel](https://gorillas-tutorial.vercel.app/). Here are the source codes for each major step.
 
 ### Initial Setup
 
@@ -88,17 +88,17 @@ If you follow along the [YouTube tutorial](TODO), here you can find the source c
 
 ### AI Logic
 
-You can find a play the final, single player version of the game on [Vercel](https://gorillas-vcrd.vercel.app/).
+You can find a play the final, single player version of the game on [Vercel](https://gorillas-tutorial.vercel.app/).
 
 - [5.0 - AI Logic](<./source-code-for-the-youtube-tutorial/5.0 - AI Logic>)
 
 - [5.1 - Draw a Thinking Gorilla](<./source-code-for-the-youtube-tutorial/5.1 - Draw a Thinking Gorilla>)
 
-## Final extended version
+## Source Code of the Final, Extended Version
 
 [![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](TODO)
 
-You can find a play the final, extended version on [CodePen](TODO) and on [Vercel](https://gorillas-phi.vercel.app/).
+You can find a play the final, extended version on [CodePen](TODO) and on [Vercel](https://gorillas-game.vercel.app/).
 
 - [Source code of the final, extended version](https://github.com/HunorMarton/gorillas)
 
