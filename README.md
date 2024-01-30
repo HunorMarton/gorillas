@@ -8,7 +8,7 @@ Welcome to the source code repository for the Gorillas JavaScript Game Tutorial.
 
 - The full tutorial you can find on [YouTube](https://www.youtube.com/watch?v=2q5EufbUEQk). This includes many more chapters, like how to make the buildings destructible, how to animate the hand of the gorilla to follow the drag movement while aiming, and we add AI logic, so you can play against the computer.
 
-- Coming Soon: You can also play the final, extended version of the game on [CodePen](TODO). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
+- Coming Soon: You can also play the final, extended version of the game on [CodePen](https://codepen.io/HunorMarton/full/jOJZqvp). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
 
 ## Source Code for the freeCodeCamp Article
 
@@ -98,7 +98,7 @@ You can find a play the final, single player version of the game on [Vercel](htt
 
 [![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](https://www.youtube.com/watch?v=2q5EufbUEQk)
 
-You can find a play the final, extended version on [CodePen](TODO) and on [Vercel](https://gorillas-game.vercel.app/).
+You can find a play the final, extended version on [CodePen](https://codepen.io/HunorMarton/full/jOJZqvp) and on [Vercel](https://gorillas-game.vercel.app/).
 
 - [Source code of the final, extended version](https://github.com/HunorMarton/gorillas)
 
