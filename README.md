@@ -1,14 +1,14 @@
 # JavaScript Game Tutorial: Gorillas
 
-[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](TODO)
+[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](https://www.youtube.com/watch?v=2q5EufbUEQk)
 
 Welcome to the source code repository for the Gorillas JavaScript Game Tutorial. There are multiple versions of this tutorial.
 
 - The simplified version you can find on [freeCodeCamp](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/). This is a comprehensive guide, yet it lacks several main features of the final game and the graphics is more stripped down.
 
-- The full tutorial you can find on [YouTube](TODO). This includes many more chapters, like how to make the buildings destructible, how to animate the hand of the gorilla to follow the drag movement while aiming, and we add AI logic, so you can play against the computer.
+- The full tutorial you can find on [YouTube](https://www.youtube.com/watch?v=2q5EufbUEQk). This includes many more chapters, like how to make the buildings destructible, how to animate the hand of the gorilla to follow the drag movement while aiming, and we add AI logic, so you can play against the computer.
 
-- You can also play the final, extended version of the game on [CodePen](TODO). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
+- Coming Soon: You can also play the final, extended version of the game on [CodePen](TODO). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
 
 ## Source Code for the freeCodeCamp Article
 
@@ -20,9 +20,9 @@ You can find the simplified version of this tutorial on [freeCodeCamp](https://w
 
 ## Source Code for the YouTube Tutorial
 
-[![YouTube Tutorial: Gorillas](<./Screenshot - YouTube.png>)](TODO)
+[![YouTube Tutorial: Gorillas](<./Screenshot - YouTube.png>)](https://www.youtube.com/watch?v=2q5EufbUEQk)
 
-You can find the full version of the tutorial on [YouTube](TODO). You can play the final, single player version of the game on [Vercel](https://gorillas-tutorial.vercel.app/). Here are the source codes for each major step.
+You can find the full version of the tutorial on [YouTube](https://www.youtube.com/watch?v=2q5EufbUEQk). You can play the final, single player version of the game on [Vercel](https://gorillas-tutorial.vercel.app/). Here are the source codes for each major step.
 
 ### Initial Setup
 
@@ -96,7 +96,7 @@ You can find a play the final, single player version of the game on [Vercel](htt
 
 ## Source Code of the Final, Extended Version
 
-[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](TODO)
+[![YouTube Tutorial: Gorillas](<./Screenshot - light.png>)](https://www.youtube.com/watch?v=2q5EufbUEQk)
 
 You can find a play the final, extended version on [CodePen](TODO) and on [Vercel](https://gorillas-game.vercel.app/).
 
