@@ -58,22 +58,59 @@ button:hover {
 #congratulations {
   position: absolute;
   transition: visibility 0s, opacity 0.5s linear;
-  min-height: 200px;
+}
+
+@media (min-height: 535px) {
+  #instructions {
+    min-height: 200px;
+  }
 }
 
 #congratulations {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 50px 80px;
   opacity: 0;
   visibility: hidden;
+  max-width: 300px;
+  backdrop-filter: blur(5px);
+}
+
+#congratulations p a {
+  color: inherit;
 }
 
 #congratulations button {
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  color: inherit;
 }
 
 #settings {
   position: absolute;
   top: calc(20px + 16.385px - 10px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
   right: 11em;
+}
+
+#settings,
+#info-left,
+#info-right {
+  animation: fadeInAnimation ease 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 450px) {
+  #settings,
+  #info-left,
+  #info-right {
+    opacity: 0;
+  }
+  #instructions {
+    visibility: hidden;
+  }
 }
 
 /* Basic CSS for the dropdown */
@@ -143,4 +180,87 @@ button:hover {
   width: 100px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+#youtube,
+#youtube-card {
+  display: none;
+}
+
+@media (min-height: 425px) {
+  /** Youtube logo by https://codepen.io/alvaromontoro */
+  #youtube {
+    z-index: 2;
+    display: block;
+    width: 30px;
+    height: 21px;
+    background: red;
+    position: relative;
+    border-radius: 50% / 11%;
+    transition: transform 0.5s;
+    color: black;
+  }
+
+  #youtube:hover,
+  #youtube:focus {
+    transform: scale(1.2);
+  }
+
+  #youtube::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7.5%;
+    left: -6%;
+    width: 112%;
+    height: 85%;
+    background: red;
+    border-radius: 9% / 50%;
+  }
+
+  #youtube::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 11px;
+    width: 15px;
+    height: 10px;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+    border-left: 10px solid white;
+  }
+
+  #youtube span {
+    font-size: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #youtube:hover + #youtube-card {
+    color: black;
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    padding: 25px 60px 25px 25px;
+    width: 200px;
+    background-color: white;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

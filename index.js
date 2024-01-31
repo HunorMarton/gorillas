@@ -1,3 +1,13 @@
+/*
+
+Learn how to code this game step-by-step on YouTube:
+
+https://www.youtube.com/watch?v=2q5EufbUEQk
+
+Follow me on 𝕏 for more: https://twitter.com/HunorBorbely
+
+*/
+
 // The state of the game
 let state = {};
 
@@ -97,17 +107,18 @@ function newGame() {
     stars: [],
 
     scale: 1,
+    shift: 0,
   };
 
   // Generate stars
   for (let i = 0; i < (window.innerWidth * window.innerHeight) / 12000; i++) {
-    const x = Math.floor((Math.random() * window.innerWidth) / state.scale);
-    const y = Math.floor((Math.random() * window.innerHeight) / state.scale);
+    const x = Math.floor(Math.random() * window.innerWidth);
+    const y = Math.floor(Math.random() * window.innerHeight);
     state.stars.push({ x, y });
   }
 
   // Generate background buildings
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 17; i++) {
     generateBackgroundBuilding(i);
   }
 
@@ -116,7 +127,7 @@ function newGame() {
     generateBuilding(i);
   }
 
-  calculateScale();
+  calculateScaleAndShift();
   initializeBombPosition();
   initializeWindmillPosition();
   setWindMillRotation();
@@ -175,15 +186,21 @@ function generateBackgroundBuilding(index) {
 
   const x = previousBuilding
     ? previousBuilding.x + previousBuilding.width + 4
-    : -30;
+    : -300;
 
   const minWidth = 60;
   const maxWidth = 110;
   const width = minWidth + Math.random() * (maxWidth - minWidth);
 
+  const smallerBuilding = index < 4 || index >= 13;
+
   const minHeight = 80;
   const maxHeight = 350;
-  const height = minHeight + Math.random() * (maxHeight - minHeight);
+  const smallMinHeight = 20;
+  const smallMaxHeight = 150;
+  const height = smallerBuilding
+    ? smallMinHeight + Math.random() * (smallMaxHeight - smallMinHeight)
+    : minHeight + Math.random() * (maxHeight - minHeight);
 
   state.backgroundBuildings.push({ x, width, height });
 }
@@ -199,9 +216,7 @@ function generateBuilding(index) {
   const maxWidth = 130;
   const width = minWidth + Math.random() * (maxWidth - minWidth);
 
-  const platformWithGorilla = index === 1 || index === 6;
-  const platformWithWindmill = index === 7;
-  const smallerBuilding = platformWithGorilla || platformWithWindmill;
+  const smallerBuilding = index <= 1 || index >= 6;
 
   const minHeight = 40;
   const maxHeight = 300;
@@ -222,11 +237,20 @@ function generateBuilding(index) {
   state.buildings.push({ x, width, height, lightsOn });
 }
 
-function calculateScale() {
+function calculateScaleAndShift() {
   const lastBuilding = state.buildings.at(-1);
   const totalWidthOfTheCity = lastBuilding.x + lastBuilding.width;
 
-  state.scale = window.innerWidth / totalWidthOfTheCity;
+  const horizontalScale = window.innerWidth / totalWidthOfTheCity ?? 1;
+  const verticalScale = window.innerHeight / 500;
+
+  state.scale = Math.min(horizontalScale, verticalScale);
+
+  const sceneNeedsToBeShifted = horizontalScale > verticalScale;
+
+  state.shift = sceneNeedsToBeShifted
+    ? (window.innerWidth - totalWidthOfTheCity * state.scale) / 2
+    : 0;
 }
 
 window.addEventListener("resize", () => {
@@ -234,7 +258,7 @@ window.addEventListener("resize", () => {
   canvas.height = window.innerHeight * window.devicePixelRatio;
   canvas.style.width = window.innerWidth + "px";
   canvas.style.height = window.innerHeight + "px";
-  calculateScale();
+  calculateScaleAndShift();
   initializeBombPosition();
   initializeWindmillPosition();
   draw();
@@ -260,8 +284,9 @@ function initializeBombPosition() {
 
   // Initialize the position of the grab area in HTML
   const grabAreaRadius = 15;
-  const left = state.bomb.x * state.scale - grabAreaRadius;
+  const left = state.bomb.x * state.scale + state.shift - grabAreaRadius;
   const bottom = state.bomb.y * state.scale - grabAreaRadius;
+
   bombGrabAreaDOM.style.left = `${left}px`;
   bombGrabAreaDOM.style.bottom = `${bottom}px`;
 }
@@ -269,8 +294,10 @@ function initializeBombPosition() {
 function initializeWindmillPosition() {
   // Move windmill into position
   const lastBuilding = state.buildings.at(-1);
-  const rooftopY = lastBuilding.height * state.scale;
-  const rooftopX = (lastBuilding.x + lastBuilding.width / 2) * state.scale;
+  let rooftopY = lastBuilding.height * state.scale;
+  let rooftopX =
+    (lastBuilding.x + lastBuilding.width / 2) * state.scale + state.shift;
+
   windmillDOM.style.bottom = `${rooftopY}px`;
   windmillDOM.style.left = `${rooftopX - 100}px`;
 
@@ -283,14 +310,20 @@ function initializeWindmillPosition() {
 function draw() {
   ctx.save();
 
-  // Flip coordinate system upside down
   ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+  drawBackgroundSky();
+
+  // Flip coordinate system upside down
   ctx.translate(0, window.innerHeight);
   ctx.scale(1, -1);
+
+  // Scale and shift view to center
+  ctx.translate(state.shift, 0);
   ctx.scale(state.scale, state.scale);
 
   // Draw scene
-  drawBackground();
+  drawBackgroundMoon();
   drawBackgroundBuildings();
   drawBuildingsWithBlastHoles();
   drawGorilla(1);
@@ -301,13 +334,8 @@ function draw() {
   ctx.restore();
 }
 
-function drawBackground() {
-  const gradient = ctx.createLinearGradient(
-    0,
-    0,
-    0,
-    window.innerHeight / state.scale
-  );
+function drawBackgroundSky() {
+  const gradient = ctx.createLinearGradient(0, 0, 0, window.innerHeight);
   if (settings.mode === "dark") {
     gradient.addColorStop(1, "#27507F");
     gradient.addColorStop(0, "#58A8D8");
@@ -318,12 +346,7 @@ function drawBackground() {
 
   // Draw sky
   ctx.fillStyle = gradient;
-  ctx.fillRect(
-    0,
-    0,
-    window.innerWidth / state.scale,
-    window.innerHeight / state.scale
-  );
+  ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
   // Draw stars
   if (settings.mode === "dark") {
@@ -332,13 +355,14 @@ function drawBackground() {
       ctx.fillRect(star.x, star.y, 1, 1);
     });
   }
+}
 
-  // Draw moon
+function drawBackgroundMoon() {
   if (settings.mode === "dark") {
     ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
     ctx.beginPath();
     ctx.arc(
-      window.innerWidth / state.scale - 200,
+      window.innerWidth / state.scale - state.shift - 200,
       window.innerHeight / state.scale - 100,
       30,
       0,
@@ -863,8 +887,8 @@ function checkFrameHit() {
   // Stop throw animation once the bomb gets out of the left, bottom, or right edge of the screen
   if (
     state.bomb.y < 0 ||
-    state.bomb.x < 0 ||
-    state.bomb.x > window.innerWidth / state.scale
+    state.bomb.x < -state.shift / state.scale ||
+    state.bomb.x > (window.innerWidth - state.shift) / state.scale
   ) {
     return true; // The bomb is off-screen
   }

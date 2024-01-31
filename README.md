@@ -4,7 +4,7 @@
 
 Welcome to the source code repository for the Gorillas JavaScript Game Tutorial. There are multiple versions of this tutorial.
 
-- The simplified version you can find on [freeCodeCamp](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/). This is a comprehensive guide, yet it lacks several main features of the final game and the graphics is more stripped down.
+- The simplified version you can find on [freeCodeCamp](https://www.freecodecamp.org/news/gorillas-game-in-javascript/). This is a comprehensive guide, yet it lacks several main features of the final game and the graphics is more stripped down.
 
 - The full tutorial you can find on [YouTube](https://www.youtube.com/watch?v=2q5EufbUEQk). This includes many more chapters, like how to make the buildings destructible, how to animate the hand of the gorilla to follow the drag movement while aiming, and we add AI logic, so you can play against the computer.
 
@@ -12,9 +12,9 @@ Welcome to the source code repository for the Gorillas JavaScript Game Tutorial.
 
 ## Source Code for the freeCodeCamp Article
 
-[![freeCodeCamp Tutorial: Gorillas](<./Screenshot - freeCodeCamp.png>)](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/)
+[![freeCodeCamp Tutorial: Gorillas](<./Screenshot - freeCodeCamp.png>)](https://www.freecodecamp.org/news/gorillas-game-in-javascript/)
 
-You can find the simplified version of this tutorial on [freeCodeCamp](https://www.freecodecamp.org/news/p/02ec8874-f2ef-476f-bb22-749dfce823d0/). You can find the end result of this article as a playable game on [Vercel](https://gorillas-freecodecamp.vercel.app/). If you follow along you should end up with the following source code:
+You can find the simplified version of this tutorial on [freeCodeCamp](https://www.freecodecamp.org/news/gorillas-game-in-javascript/). You can find the end result of this article as a playable game on [Vercel](https://gorillas-freecodecamp.vercel.app/). If you follow along you should end up with the following source code:
 
 - [Source Code for the freeCodeCamp article](<./source-code-for-the-freeCodeCamp-article>)
 
