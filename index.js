@@ -45,11 +45,13 @@ const windInfoDOM = document.getElementById("wind-info");
 const windSpeedDOM = document.getElementById("wind-speed");
 
 // Left info panel
+const info1DOM = document.getElementById("info-left");
 const name1DOM = document.querySelector("#info-left .name");
 const angle1DOM = document.querySelector("#info-left .angle");
 const velocity1DOM = document.querySelector("#info-left .velocity");
 
 // Right info panel
+const info2DOM = document.getElementById("info-right");
 const name2DOM = document.querySelector("#info-right .name");
 const angle2DOM = document.querySelector("#info-right .angle");
 const velocity2DOM = document.querySelector("#info-right .velocity");
@@ -66,6 +68,7 @@ const congratulationsDOM = document.getElementById("congratulations");
 const winnerDOM = document.getElementById("winner");
 
 // Settings toolbar
+const settingsDOM = document.getElementById("settings");
 const singlePlayerButtonDOM = document.querySelectorAll(".single-player");
 const twoPlayersButtonDOM = document.querySelectorAll(".two-players");
 const autoPlayButtonDOM = document.querySelectorAll(".auto-play");
@@ -1013,3 +1016,9 @@ function setWindMillRotation() {
 
   windSpeedDOM.innerText = Math.round(state.windSpeed);
 }
+
+window.addEventListener("mousemove", function (e) {
+  settingsDOM.style.opacity = 1;
+  info1DOM.style.opacity = 1;
+  info2DOM.style.opacity = 1;
+});
