@@ -1,0 +1,17 @@
+body {
+  font-family: Montserrat;
+  margin: 50px;
+  max-width: 500px;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+@media (display-mode: fullscreen) {
+  body {
+    background-color: #f9bb86;
+    font-size: 1.2em;
+  }
+}

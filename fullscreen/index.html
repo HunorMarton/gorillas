@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fullscreen</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <p>
+      How to run a game you created for the web in full screen? In this quick
+      tutorial, we check how to display a game or any other HTML element in
+      fullscreen, how to exit fullscreen, and how to make a nice fullscreen
+      toggle button in SVG.
+    </p>
+
+    <button onclick="toggleFullscreen()">
+      <svg width="30" height="30">
+        <path
+          id="enter-fullscreen"
+          stroke="black"
+          stroke-width="3"
+          fill="none"
+          d="
+            M 10, 2 L 2,2 L 2, 10
+            M 20, 2 L 28,2 L 28, 10
+            M 28, 20 L 28,28 L 20, 28
+            M 10, 28 L 2,28 L 2, 20"
+        />
+        <path
+          id="exit-fullscreen"
+          stroke="transparent"
+          stroke-width="3"
+          fill="none"
+          d="
+            M 10, 2 L 10,10 L 2, 10
+            M 20, 2 L 20,10 L 28, 10
+            M 28, 20 L 20,20 L 20, 28
+            M 10, 28 L 10,20 L 2, 20"
+        />
+      </svg>
+    </button>
+  </body>
+</html>

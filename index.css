@@ -246,3 +246,11 @@ button:hover {
   width: 200px;
   background-color: white;
 }
+
+#fullscreen {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}

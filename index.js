@@ -1022,3 +1022,18 @@ window.addEventListener("mousemove", function (e) {
   info1DOM.style.opacity = 1;
   info2DOM.style.opacity = 1;
 });
+
+const enterFullscreen = document.getElementById("enter-fullscreen");
+const exitFullscreen = document.getElementById("exit-fullscreen");
+
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    enterFullscreen.setAttribute("stroke", "transparent");
+    exitFullscreen.setAttribute("stroke", "white");
+  } else {
+    document.exitFullscreen();
+    enterFullscreen.setAttribute("stroke", "white");
+    exitFullscreen.setAttribute("stroke", "transparent");
+  }
+}

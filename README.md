@@ -10,6 +10,8 @@ Welcome to the source code repository for the Gorillas JavaScript Game Tutorial.
 
 - You can also play the final, extended version of the game on [CodePen](https://codepen.io/HunorMarton/full/jOJZqvp). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
 
+While the main tutorials are very packed, there are still a few topics we could not cover in them. Below you can also find a few follow-up tutorials, like how to make the game full-screen.
+
 ## Source Code for the freeCodeCamp Article
 
 [![freeCodeCamp Tutorial: Gorillas](<./Screenshot - freeCodeCamp.png>)](https://www.freecodecamp.org/news/gorillas-game-in-javascript/)
@@ -93,6 +95,18 @@ You can find a play the final, single player version of the game on [Vercel](htt
 - [5.0 - AI Logic](<./source-code-for-the-youtube-tutorial/5.0 - AI Logic>)
 
 - [5.1 - Draw a Thinking Gorilla](<./source-code-for-the-youtube-tutorial/5.1 - Draw a Thinking Gorilla>)
+
+## Follow-Up Tutorials
+
+### How to use the Fullscreen API in JavaScript?
+
+[![YouTube Tutorial: Fullscreen](<./Fullscreen.png>)](https://youtu.be/jX3mIQdQQ2w?si=beZm65ciOD_TRp2f)
+
+How to run a game you created for the web in fullscreen? In this [quick tutorial](https://youtu.be/jX3mIQdQQ2w?si=beZm65ciOD_TRp2f), we check how to display a game or any other HTML element in fullscreen, how to exit fullscreen, and how to make a nice fullscreen toggle button in SVG.
+
+[Source Code]((<./fullscreen>))
+
+[Demo](https://codepen.io/HunorMarton/full/QWoRLXM)
 
 ## Source Code of the Final, Extended Version
 
