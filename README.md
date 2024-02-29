@@ -104,7 +104,7 @@ You can find a play the final, single player version of the game on [Vercel](htt
 
 How to run a game you created for the web in fullscreen? In this [quick tutorial](https://youtu.be/jX3mIQdQQ2w?si=beZm65ciOD_TRp2f), we check how to display a game or any other HTML element in fullscreen, how to exit fullscreen, and how to make a nice fullscreen toggle button in SVG.
 
-[Source Code]((<./fullscreen>))
+[Source Code](<./fullscreen>)
 
 [Demo](https://codepen.io/HunorMarton/full/QWoRLXM)
 
