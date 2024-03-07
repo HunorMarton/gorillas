@@ -1,10 +1,11 @@
 /*
-const button = document.getElementById("fullscreen");
 
-button.addEventListener("click", () => {
-  document.documentElement.requestFullscreen();
-});
-console.log('hello');
+How to use the Fullscreen API in JavaScript?
+
+Tutorial: https://youtu.be/jX3mIQdQQ2w
+
+Follow me on 𝕏 for more: https://twitter.com/HunorBorbely
+
 */
 
 const enterFullscreen = document.getElementById("enter-fullscreen");

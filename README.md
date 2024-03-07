@@ -10,7 +10,11 @@ Welcome to the source code repository for the Gorillas JavaScript Game Tutorial.
 
 - You can also play the final, extended version of the game on [CodePen](https://codepen.io/HunorMarton/full/jOJZqvp). This includes even more features, like light and dark mode and in this version the flying bomb is also affected by the wind.
 
-While the main tutorials are very packed, there are still a few topics we could not cover in them. Below you can also find a few follow-up tutorials, like how to make the game full-screen.
+While the main tutorials are very packed, there are still a few topics we could not cover in them. Below you can also find a few follow-up tutorials
+
+- How to make the game fullscreen?
+
+- How to handle dark mode?
 
 ## Source Code for the freeCodeCamp Article
 
@@ -107,6 +111,14 @@ How to run a game you created for the web in fullscreen? In this [quick tutorial
 [Source Code](<./fullscreen>)
 
 [Demo](https://codepen.io/HunorMarton/full/QWoRLXM)
+
+### How to handle dark mode with CSS and JavaScript? (with SVG toggle button)
+
+[![YouTube Tutorial: Dark Mode](<./Dark Mode.png>)](https://youtu.be/GUSUA72t7p0)
+
+How can we detect dark mode in CSS and JavaScript? How can we manually override it with a toggle button? And how do we save our setting in localStorage? In this [quick tutorial](https://youtu.be/GUSUA72t7p0), we look into detecting dark mode in CSS and JavaScript and then create a toggle button with SVG to override the default behavior.
+
+[Source Code](<./dark-mode>)
 
 ## Source Code of the Final, Extended Version
 

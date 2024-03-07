@@ -22,10 +22,12 @@ let delayTimeoutID = undefined;
 let simulationMode = false;
 let simulationImpact = {};
 
+const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
 // Settings
 const settings = {
   numberOfPlayers: 1, // 0 means two computers are playing against each other
-  mode: "light",
+  mode: darkModeMediaQuery.matches ? "dark" : "light",
 };
 
 const blastHoleRadius = 18;
@@ -81,6 +83,16 @@ colorModeButtonDOM.addEventListener("click", () => {
   } else {
     settings.mode = "dark";
     colorModeButtonDOM.innerText = "Light Mode";
+  }
+  draw();
+});
+
+darkModeMediaQuery.addEventListener("change", (e) => {
+  settings.mode = e.matches ? "dark" : "light";
+  if (settings.mode === "dark") {
+    colorModeButtonDOM.innerText = "Light Mode";
+  } else {
+    colorModeButtonDOM.innerText = "Dark Mode";
   }
   draw();
 });
